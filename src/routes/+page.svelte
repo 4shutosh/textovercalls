@@ -92,9 +92,9 @@
     </p>
   </div>
   <div
-    class="sticky top-0 bg-white w-full text-gray-800
-	mt-2 lg:mt-10
-	font-lato font-light text-md lg:text-xl flex justify-center items-center"
+    class="sticky top-0 bg-white w-full lg:w-3/5 text-gray-800
+	mt-4 lg:mt-10
+	font-lato font-light text-md lg:text-xl flex"
   >
     <!-- <ScrollingText bind:currentIndex /> -->
     <SelectorText bind:currentIndex bind:isFlipped />
