@@ -108,7 +108,7 @@
       class="lg:w-3/5 shadow-xl rounded-sm"
     /> -->
 
-    <div class="lg:w-3/5">
+    <div class="mx-2 lg:w-3/5">
       <FlipperImageText bind:currentIndex bind:isFlipped />
     </div>
 
