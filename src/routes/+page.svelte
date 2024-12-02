@@ -4,7 +4,7 @@
   import { onMount } from "svelte";
   import { writable } from "svelte/store";
   import { explanations } from "../strings";
-
+  import { SITE_URL, SITE_TITLE, SITE_DESCRIPTION } from "../lib/siteconfig";
   let currentIndex = 0;
   let isFlipped = false;
   const isLargeScreen = writable(false);
@@ -26,6 +26,40 @@
     };
   });
 </script>
+
+<svelte:head>
+  <title>{SITE_TITLE}</title>
+  <link rel="canonical" href={SITE_URL} />
+  <link
+    rel="alternate"
+    type="application/rss+xml"
+    href={SITE_URL + "/api/rss.xml"}
+  />
+  <meta property="og:url" content={SITE_URL} />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content={SITE_TITLE} />
+  <meta name="Description" content={SITE_DESCRIPTION} />
+  <meta property="og:description" content={SITE_DESCRIPTION} />
+  <!-- <meta property="og:image" content={DEFAULT_OG_IMAGE} /> -->
+  <meta name="twitter:card" content="summary" />
+  <meta
+    name="theme-color"
+    content="#FFFFFF"
+    media="(prefers-color-scheme: light)"
+  />
+  <meta
+    name="theme-color"
+    content="#110f0f"
+    media="(prefers-color-scheme: dark)"
+  />
+  <meta name="twitter:title" content={SITE_TITLE} />
+  <meta name="twitter:description" content={SITE_DESCRIPTION} />
+  <!-- <meta name="twitter:image" content={DEFAULT_OG_IMAGE} /> -->
+
+  <script
+    src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+  ></script>
+</svelte:head>
 
 <div
   class="flex flex-col justify-center items-center max-w-full overflow-x-hidden mx-4"
