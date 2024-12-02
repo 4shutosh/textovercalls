@@ -3,14 +3,10 @@
   import FlipperImageText from "./components/FlipperImageText.svelte";
   import { onMount } from "svelte";
   import { writable } from "svelte/store";
+  import { explanations } from "../strings";
 
   let currentIndex = 0;
-
-  const images: string[] = [
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYj9b1VTUS-AFI_MxT1Z-7ze-DinKc_O1HBg&s",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYj9b1VTUS-AFI_MxT1Z-7ze-DinKc_O1HBg&s",
-    "https://i.redd.it/a-little-fanart-of-saul-i-made-based-in-a-shitpost-picture-v0-rv5mdzwpbjra1.jpg?width=710&format=pjpg&auto=webp&s=7944beb499c69e36abed8b26067b262a076c6aae",
-  ];
+  let isFlipped = false;
   const isLargeScreen = writable(false);
 
   // Function to check the current screen width
@@ -42,7 +38,7 @@
   </h1>
 
   <div
-    class="mt-8 lg:w-3/5 text-gray-800 font-lato font-light text-lg lg:text-xl flex flex-col"
+    class="mt-8 lg:w-3/5 text-gray-800 font-lato font-light text-md lg:text-xl flex flex-col"
   >
     <p class="mt-4">
       Have you ever been deep in focus, only to be interrupted by an unexpected
@@ -64,13 +60,13 @@
   <div
     class="sticky top-0 bg-white w-full text-gray-800
 	mt-2 lg:mt-10
-	font-lato font-light text-lg lg:text-xl flex justify-center items-center"
+	font-lato font-light text-md lg:text-xl flex justify-center items-center"
   >
     <!-- <ScrollingText bind:currentIndex /> -->
-    <SelectorText bind:currentIndex />
+    <SelectorText bind:currentIndex bind:isFlipped />
   </div>
 
-  <div class="lg:w-4/5 w-full flex lg:flex-row mt-4">
+  <div class="lg:w-4/5 w-full flex lg:flex-row my-4">
     <!-- <img src={images[selectedIndex]} /> -->
     <!-- <img
       src={conversationGood}
@@ -79,21 +75,54 @@
     /> -->
 
     <div class="lg:w-3/5">
-      <FlipperImageText />
+      <FlipperImageText bind:currentIndex bind:isFlipped />
     </div>
 
     {#if $isLargeScreen}
       <div
-        class="text-gray-800 font-lato font-light mt-4 lg:w-2/5
+        class="text-gray-800 font-lato font-light lg:w-2/5
 	  text-lg lg:text-xl flex justify-center items-center lg:ml-4"
       >
         {#if currentIndex === 0}
-          Pinkman starts poorly, calling Heisenberg directly without context.<br
-          />He isn’t concise, doesn’t gather or share all relevant information,
-          and fails to understand the issue.<br /> Midway, Heisenberg remains unclear
-          about the problem and unable to assist.
-        {:else if currentIndex === 1}{:else if currentIndex === 2}{/if}
+          {@html explanations.bad}
+        {:else if currentIndex === 1}
+          {@html explanations.good}
+        {:else if currentIndex === 2}
+          {@html explanations.great}
+        {/if}
       </div>
     {/if}
+  </div>
+
+  <div
+    class="mt-4 lg:w-3/5 text-gray-800 font-lato font-light text-md lg:text-xl flex flex-col"
+  >
+    <p class="mt-4">
+      Calls have their place—urgent matters and real-time collaboration—but not
+      every issue demands an interruption.
+    </p>
+
+    <p class="mt-4">
+      Before scheduling or dialing, ask yourself: can this be solved with a
+      simple text or email?
+    </p>
+  </div>
+
+  <hr class="w-full mt-10 bg-gray-700" />
+
+  <div
+    class="lg:w-3/5 my-2 w-full text-sm flex flex-row gap-4 font-lato font-light italic
+	text-gray-700 items-center justify-center"
+  >
+    <a
+      href="https://github.com/4shutosh/textovercalls"
+      class="hover:underline"
+      target="_blank">Source Code</a
+    >
+    <a
+      href="https://x.com/4shutoshSingh"
+      class="hover:underline"
+      target="_blank">Creator</a
+    >
   </div>
 </div>

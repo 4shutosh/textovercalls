@@ -1,7 +1,7 @@
-<script>
+<script lang="ts">
   import { onMount } from "svelte";
+  import { explanations } from "../../strings";
 
-  let isFlipped = false;
   let isBrowser = false;
 
   onMount(() => {
@@ -16,10 +16,17 @@
       isFlipped = !isFlipped;
     }
   };
+  const images: string[] = [
+    "https://raw.githubusercontent.com/4shutosh/textovercalls/refs/heads/main/images/conversation_bad.webp",
+    "https://raw.githubusercontent.com/4shutosh/textovercalls/refs/heads/main/images/conversation_good.webp",
+    "https://raw.githubusercontent.com/4shutosh/textovercalls/refs/heads/main/images/conversation_great.webp",
+  ];
+  export let isFlipped = false;
+  export let currentIndex = 0;
 </script>
 
 <div
-  class="relative cursor-pointer lg:cursor-default [perspective:1000px]"
+  class="relative cursor-pointer lg:cursor-default [perspective:1000px] my-4"
   on:click={handleFlip}
 >
   <div
@@ -30,7 +37,7 @@
     <div class="[backface-visibility:hidden]">
       <div class="relative">
         <img
-          src={"conversationGood"}
+          src={images[currentIndex]}
           loading="lazy"
           alt="Conversation"
           class="object-cover rounded-lg shadow-lg"
@@ -40,7 +47,13 @@
             width="20"
             height="20"
             viewBox="0 0 24 24"
-            class="fill-red-600"
+            class={currentIndex === 0
+              ? "fill-red-600"
+              : currentIndex === 1
+                ? "fill-orange-600"
+                : currentIndex === 2
+                  ? "fill-green-600"
+                  : "fill-gray-600"}
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -55,15 +68,26 @@
 
     <!-- Back side -->
     <div
-      class="absolute inset-0 bg-white rounded-lg shadow-lg p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] lg:hidden"
+      class="absolute inset-0 rounded-lg shadow-lg p-4 [transform:rotateY(180deg)] [backface-visibility:hidden]
+      {currentIndex === 0
+        ? 'bg-red-100'
+        : currentIndex === 1
+          ? 'bg-orange-50'
+          : currentIndex === 2
+            ? 'bg-green-50'
+            : 'fill-gray-600'}
+      lg:hidden"
     >
       <div
-        class="flex flex-col h-full font-lato font-light text-lg justify-center items-center space-y-4"
+        class="flex flex-col h-full font-lato font-light text-md lg:text-xl justify-center items-center space-y-4"
       >
-        Pinkman starts poorly, calling Heisenberg directly without context.<br
-        />He isn’t concise, doesn’t gather or share all relevant information,
-        and fails to understand the issue.<br /> Midway, Heisenberg remains unclear
-        about the problem and unable to assist.
+        {#if currentIndex === 0}
+          {@html explanations.bad}
+        {:else if currentIndex === 1}
+          {@html explanations.good}
+        {:else if currentIndex === 2}
+          {@html explanations.great}
+        {/if}
       </div>
     </div>
   </div>

@@ -1,9 +1,11 @@
 <script lang="ts">
   const words: string[] = ["poor", "good", "great"];
   export let currentIndex = 0;
+  export let isFlipped = false;
 
   function handleClick(index: number) {
     // Prevent click interference
+    isFlipped = false;
     currentIndex = index;
   }
 </script>
