@@ -16,7 +16,7 @@
     <div
       class="lg:mx-1 cursor-pointer {i === currentIndex
         ? 'font-medium'
-        : 'font-light'} px-2 rounded-full {i === 0
+        : 'font-light'} px-2 pb-1 pt-0 rounded-full {i === 0
         ? 'text-red-600'
         : i === 1
           ? 'text-orange-600'
