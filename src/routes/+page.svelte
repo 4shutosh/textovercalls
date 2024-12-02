@@ -65,7 +65,7 @@
   class="flex flex-col justify-center items-center max-w-full overflow-x-hidden mx-4"
 >
   <h1
-    class="lg:w-3/5 mt-16 w-full
+    class="lg:w-3/5 mt-10 w-full
         text-black font-lato font-medium text-4xl lg:text-6xl"
   >
     text over calls
@@ -131,7 +131,7 @@
   <div
     class="mt-4 lg:w-3/5 text-gray-800 font-lato font-light text-md lg:text-xl flex flex-col"
   >
-    <p class="mt-4">
+    <p>
       Calls have their place—urgent matters and real-time collaboration—but not
       every issue demands an interruption.
     </p>
