@@ -14,7 +14,7 @@ export const explanations = {
 `,
   great: `<ul class="list-disc px-2">
 <li>Heisenberg begins by clearly stating the issue and its urgency, establishing the stakes early.</li>
-<li>Shares all the relevant details including causes, risks and proactively proposes two solutions Gus to help him.</li>
+<li>Shares all the relevant details including causes, risks and proactively proposes two solutions allowing Gus to help him.</li>
 <li>The tone is composed and professional.</li>
 </ul>`,
 };
