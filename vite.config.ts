@@ -8,4 +8,7 @@ export default defineConfig({
       allow: ["src/images"], // Adjust the path as needed
     },
   },
+  build: {
+    outDir: "build",
+  },
 });
