@@ -6,25 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EHTJFYCVDB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-EHTJFYCVDB');
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Text Over Calls",
+        "url": "https://www.textovercalls.com",
+        "description": "Most meetings could be messages. A field guide to async communication — with poor, good, and great examples illustrated by Breaking Bad.",
+        "inLanguage": "en",
+        "publisher": {
+          "@type": "Person",
+          "name": "Ashutosh Singh",
+          "url": "https://twitter.com/4shutoshSingh"
+        }
+      }
+    </script>
     %sveltekit.head%
   </head>
   <body data-sveltekit-preload-data="hover">
-    <!-- Google Tag Manager (noscript) -->
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-EHTJFYCVDB"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-EHTJFYCVDB");
-    </script>
-    <!-- End Google Tag Manager (noscript) -->
     <div style="display: contents">%sveltekit.body%</div>
   </body>
 </html>
