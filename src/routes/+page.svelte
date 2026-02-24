@@ -83,6 +83,22 @@
     resultCall = count > 0 && count < total;
   });
 
+  const totalChecks = checklistItems.length;
+  const firstUncheckedMessages: Record<number, string> = {
+    0: "Start with what you need and why it matters.",
+    1: "Have you shared all the information they need to help you?",
+    2: "Is this really urgent?",
+    3: "Add a recommendation or next steps.",
+    4: "Re-read it once as if you were the recipient",
+  };
+  const callResultMessage = $derived((() => {
+    const count = checked.filter(Boolean).length;
+    if (count <= 0 || count >= totalChecks) return "";
+    const firstUnchecked = checked.findIndex((c) => !c);
+    if (firstUnchecked < 0) return "";
+    return firstUncheckedMessages[firstUnchecked] ?? "";
+  })());
+
   onMount(() => {
     const els = document.querySelectorAll(".fade-in");
     const obs = new IntersectionObserver(
@@ -247,7 +263,7 @@
     </div>
 
     <div class="check-result call-anyway" class:show={resultCall}>
-      📞 Not quite there. Refine your message or consider a call for this one.
+      {callResultMessage}
     </div>
     <div class="check-result text-it" class:show={resultText}>
       ✓ Good to send.
