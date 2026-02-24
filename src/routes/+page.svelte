@@ -80,7 +80,7 @@
     const count = checked.filter(Boolean).length;
     const total = checklistItems.length;
     resultText = count === total;
-    // resultCall = count > 0 && count < total;
+    resultCall = count > 0 && count < total;
   });
 
   onMount(() => {
@@ -138,6 +138,7 @@
   </script>
 </svelte:head>
 
+<div class="page">
 <section class="hero fade-in">
   <div class="bad-phrases">
     <span class="bad-phrase">Quick call?</span>
@@ -152,9 +153,9 @@
   <h1>Stop interrupting.<br /><i>Start writing</i> messages<br />that actually work.</h1>
   <div class="hero-body">
     <p>Every unexpected call breaks focus. It takes the average person <strong>23 minutes to fully recover</strong> after an interruption and most calls could have been a message.</p>
-    <p>Texts, done right, let you communicate without derailing someone's day. Explain what you need, why it matters, and how urgent it is <strong>all in one well-written message.</strong></p>
-	<p>Writing a clear message is a sign of respect. Firing off a call request is a sign of laziness.</p>
-    <p>Below are three real examples: poor, good, and great — illustrated by the cast of Breaking Bad. And yes, we also tell you <strong>when to just pick up the phone.</strong></p>
+    <p>Say what you need, why it matters, and how urgent it is — <strong>all in one message.</strong></p>
+    <p class="hero-callout">Writing a clear message is a sign of respect. Firing off a call request is a sign of laziness.</p>
+    <p>Below: three examples from the cast of Breaking Bad. And yes there is a also a time to <strong>pick up the phone.</strong></p>
     <div class="bb-credit">
       <span>Featuring Heisenberg, Pinkman, Saul &amp; Gustavo · No meth involved</span>
     </div>
@@ -168,6 +169,9 @@
   <!-- </blockquote> -->
 <!-- </div> -->
 
+<hr class="divider" />
+
+<div class="examples">
 <section class="example poor fade-in" id="poor">
   <div class="example-meta">
     <div class="example-label poor">● Poor</div>
@@ -225,6 +229,7 @@
     </div>
   </div>
 </section>
+</div>
 
 <section class="checklist-section fade-in">
   <div class="checklist-inner">
@@ -242,10 +247,10 @@
     </div>
 
     <div class="check-result call-anyway" class:show={resultCall}>
-      📞 <strong>You might want to call on this one.</strong> Some conversations are too nuanced for text. If you're stuck, scroll down to see when calling is genuinely the right move.
+      📞 Not quite there. Refine your message or consider a call for this one.
     </div>
     <div class="check-result text-it" class:show={resultText}>
-      ✓ <strong>This message is ready to send.</strong> You've respected the reader's time and given them everything they need.
+      ✓ Good to send.
     </div>
   </div>
 </section>
@@ -259,12 +264,12 @@
       <p class="lead" style="margin-top:0.9em">Reaching for the phone in the right situation isn't a failure of async discipline. It's wisdom.</p>
     </div>
     <ul class="call-list">
-      <li><span class="num">01</span>The topic involves strong emotions or sensitive news that could be badly misread in text.</li>
-      <li><span class="num">02</span>You've gone back-and-forth more than 3 times without aligning, a 5-minute call will resolve it.</li>
-      <li><span class="num">03</span>It's a genuine emergency where seconds matter, not hours.</li>
-      <li><span class="num">04</span>You need real-time brainstorming where ideas build rapidly on each other.</li>
-      <li><span class="num">05</span>The other person has said they prefer calls for this kind of topic — respect that.</li>
-      <li><span class="num">06</span>You're onboarding someone and a live walkthrough saves them hours of confusion.</li>
+      <li><span class="num">01</span>Strong emotions or sensitive news that could be misread in text.</li>
+      <li><span class="num">02</span>More than 3 back-and-forths without resolution, a 5-minute call will resolve it.</li>
+      <li><span class="num">03</span>A genuine emergency where minutes matter, not hours.</li>
+      <li><span class="num">04</span>Real-time brainstorming where ideas build rapidly on each other.</li>
+      <li><span class="num">05</span>The other person has said they prefer calls for this kind of thing — respect that.</li>
+      <li><span class="num">06</span>Onboarding someone where a live walkthrough saves hours.</li>
     </ul>
   </div>
 </section>
@@ -287,4 +292,5 @@
       Share on X
     </a>
   </div>
+</div>
 </div>
