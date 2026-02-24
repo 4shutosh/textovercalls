@@ -468,9 +468,10 @@ body {
 
 /* ── CALL SECTION ── */
 .call-section {
-  background: var(--ink);
-  color: #E8E4DC;
-  padding: 6rem 6vw;
+  background: var(--bg);
+  color: var(--ink);
+  padding: 4rem 0;
+  border-top: 1px solid var(--border);
 }
 
 .call-inner {
@@ -478,55 +479,58 @@ body {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 5rem;
+  gap: 4rem;
   align-items: start;
 }
 
 @media (max-width: 700px) {
-  .call-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .call-inner { grid-template-columns: 1fr; gap: 2rem; }
 }
 
-.call-section .eyebrow { color: rgba(232,228,220,0.35); margin-bottom: 1rem; }
+.call-section .eyebrow,
+.call-section .section-label { color: var(--soft); margin-bottom: 1rem; opacity: 0.7; }
 
 .call-section h2 {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(1.9rem, 3.5vw, 3rem);
-  font-weight: 500;
-  line-height: 1.18;
-  margin-bottom: 1.2rem;
+  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 0.9rem;
+  color: var(--ink);
 }
 
-.call-section h2 em { font-style: italic; font-weight: 300; opacity: 0.55; }
+.call-section h2 em { font-style: italic; font-weight: 300; color: var(--soft); }
 
 .call-section .lead {
-  font-size: 0.97rem;
-  color: rgba(232,228,220,0.7);
-  line-height: 1.8;
+  font-size: 0.95rem;
+  color: var(--soft);
+  line-height: 1.78;
 }
 
-.call-section .lead + .lead { margin-top: 0.9em; }
+.call-section .lead + .lead { margin-top: 0.75em; }
 
-.call-list { list-style: none; display: flex; flex-direction: column; }
+.call-list { list-style: none; display: flex; flex-direction: column; margin-top: 2.2rem; }
 
 .call-list li {
   display: flex;
   align-items: flex-start;
-  gap: 1rem;
-  font-size: 0.95rem;
-  line-height: 1.7;
-  color: rgba(232,228,220,0.85);
-  padding: 1rem 0;
-  border-bottom: 1px solid rgba(255,255,255,0.07);
+  gap: 0.9rem;
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--soft);
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--border);
 }
 
-.call-list li:first-child { border-top: 1px solid rgba(255,255,255,0.07); }
+.call-list li:first-child { border-top: 1px solid var(--border); }
 
 .call-list li .num {
   flex-shrink: 0;
   font-family: 'DM Mono', monospace;
-  font-size: 0.68rem;
-  color: rgba(232,228,220,0.25);
-  margin-top: 0.2em;
+  font-size: 0.65rem;
+  color: var(--border);
+  margin-top: 0.22em;
+  letter-spacing: 0.05em;
 }
 
 /* ── SHARE STRIP ── */

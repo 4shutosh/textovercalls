@@ -153,6 +153,7 @@
   <div class="hero-body">
     <p>Every unexpected call breaks focus. It takes the average person <strong>23 minutes to fully recover</strong> after an interruption and most calls could have been a message.</p>
     <p>Texts, done right, let you communicate without derailing someone's day. Explain what you need, why it matters, and how urgent it is <strong>all in one well-written message.</strong></p>
+	<p>Writing a clear message is a sign of respect. Firing off a call request is a sign of laziness.</p>
     <p>Below are three real examples: poor, good, and great — illustrated by the cast of Breaking Bad. And yes, we also tell you <strong>when to just pick up the phone.</strong></p>
     <div class="bb-credit">
       <span>Featuring Heisenberg, Pinkman, Saul &amp; Gustavo · No meth involved</span>
@@ -160,12 +161,12 @@
   </div>
 </section>
 
-<div class="pull-quote fade-in">
-  <blockquote>
-    Writing a clear message is a sign of respect. Firing off a call request is a sign of laziness.
-    <cite>— The entire point of this page</cite>
-  </blockquote>
-</div>
+<!-- <div class="pull-quote fade-in"> -->
+  <!-- <blockquote> -->
+    <!-- Writing a clear message is a sign of respect. Firing off a call request is a sign of laziness. -->
+    <!-- <cite>— The entire point of this page</cite> -->
+  <!-- </blockquote> -->
+<!-- </div> -->
 
 <section class="example poor fade-in" id="poor">
   <div class="example-meta">
@@ -228,8 +229,8 @@
 <section class="checklist-section fade-in">
   <div class="checklist-inner">
     <div class="eyebrow">Before you hit send</div>
-    <h2>The async message checklist</h2>
-    <p class="sub">Run through this before sending. If you tick all five, your message is ready. If you can't, rewrite — don't call.</p>
+    <h2>A quick check</h2>
+    <p class="sub">Five things worth confirming before sending. If you tick all five, your message is ready. If you can't, rewrite, don't call.</p>
 
     <div class="checks">
       {#each checklistItems as item, i}
