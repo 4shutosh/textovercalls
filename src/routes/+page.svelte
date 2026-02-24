@@ -175,7 +175,7 @@
 <section class="example poor fade-in" id="poor">
   <div class="example-meta">
     <div class="example-label poor">● Poor</div>
-    <h2>No context, all noise</h2>
+    <h2>No context, all friction</h2>
     <p class="verdict">Pinkman pings Heisenberg without any setup — an attempted huddle call out of nowhere, then vague fragments about "that thing." Every message forces a follow-up question. Nothing gets resolved.</p>
     <ul class="verdict-points">
       <li><span class="icon">✕</span>Calls directly without context — forces an interruption before the conversation even begins.</li>
@@ -201,7 +201,7 @@
   </div>
   <div class="example-meta">
     <div class="example-label good">● Good</div>
-    <h2>Clear, calm, but slightly needy</h2>
+    <h2>Clear problem, vague handoff</h2>
     <p class="verdict">Saul opens with a vivid metaphor that makes the risk instantly understandable. He's concise and proposes a direction — but leans on mild urgency that isn't quite earned.</p>
     <ul class="verdict-points">
       <li><span class="icon">→</span>Opens with a clear metaphor — makes the problem immediately understandable.</li>
@@ -214,7 +214,7 @@
 <section class="example great fade-in" id="great">
   <div class="example-meta">
     <div class="example-label great">● Great</div>
-    <h2>Complete, calm, and actionable</h2>
+    <h2>One message, zero questions</h2>
     <p class="verdict">Heisenberg opens by clearly naming the issue and its stakes. He shares all relevant context — causes, risks, two concrete options, and lets Gustavo respond on his own schedule.</p>
     <ul class="verdict-points">
       <li><span class="icon">✓</span>Clearly states the issue and urgency upfront — Gustavo knows what's at stake immediately.</li>
