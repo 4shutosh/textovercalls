@@ -14,7 +14,7 @@ export const SITE_DESCRIPTION_SHORT =
 
 /** OG / Twitter card description variant */
 export const SITE_DESCRIPTION_OG =
-  "Most meetings could be messages. Learn poor, good, and great ways to communicate async — illustrated by Breaking Bad.";
+  "Most meetings could be messages. Learn how to write async messages that respect people's time, illustrated by Breaking Bad.";
 
 /** Schema.org / WebSite description */
 export const SITE_DESCRIPTION_SCHEMA =
