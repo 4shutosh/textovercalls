@@ -194,10 +194,10 @@
     <h2>No context, all friction</h2>
     <p class="verdict">Pinkman pings Heisenberg without any setup — an attempted huddle call out of nowhere, then vague fragments about "that thing." Every message forces a follow-up question. Nothing gets resolved.</p>
     <ul class="verdict-points">
-      <li><span class="icon">✕</span>Calls directly without context — forces an interruption before the conversation even begins.</li>
-      <li><span class="icon">✕</span>Vague and fragmented — each message requires a follow-up just to understand the last one.</li>
+      <li><span class="icon">✕</span>Calls directly without context — an interruption before the conversation even begins.</li>
+      <li><span class="icon">✕</span>Each message creates more questions than it answers.</li>
       <li><span class="icon">✕</span>Midway through, Heisenberg still has no idea what the actual problem is.</li>
-      <li><span class="icon">✕</span>Tone is reactive and frustrated — making resolution harder, not easier.</li>
+      <li><span class="icon">✕</span>Reactive and frustrated in tone — making resolution harder, not easier.</li>
     </ul>
   </div>
   <div class="example-img">
@@ -221,7 +221,7 @@
     <p class="verdict">Saul opens with a vivid metaphor that makes the risk instantly understandable. He's concise and proposes a direction — but leans on mild urgency that isn't quite earned.</p>
     <ul class="verdict-points">
       <li><span class="icon">→</span>Opens with a clear metaphor — makes the problem immediately understandable.</li>
-      <li><span class="icon">→</span>Concise, highlights the risk, and suggests a creative solution in one message.</li>
+      <li><span class="icon">→</span>Concise, highlights the risk, and suggests a path forward.</li>
       <li><span class="icon">→</span>Tone is calm and pragmatic, easy to respond to thoughtfully.</li>
     </ul>
   </div>
@@ -231,10 +231,10 @@
   <div class="example-meta">
     <div class="example-label great">● Great</div>
     <h2>One message, zero questions</h2>
-    <p class="verdict">Heisenberg opens by clearly naming the issue and its stakes. He shares all relevant context — causes, risks, two concrete options, and lets Gustavo respond on his own schedule.</p>
+    <p class="verdict">Heisenberg names the issue clearly, shares all relevant context: causes, risks, two concrete options — and lets Gustavo respond on his own schedule.    </p>
     <ul class="verdict-points">
-      <li><span class="icon">✓</span>Clearly states the issue and urgency upfront — Gustavo knows what's at stake immediately.</li>
-      <li><span class="icon">✓</span>Shares causes, risks, and two concrete options, responder can actually help without asking anything.</li>
+      <li><span class="icon">✓</span>Stakes are clear from the first sentence.</li>
+      <li><span class="icon">✓</span>Two options given — Gustavo can actually help without asking anything back.</li>
       <li><span class="icon">✓</span>Composed and professional. The thread becomes a written record for both parties.</li>
     </ul>
   </div>
@@ -277,7 +277,7 @@
       <div class="eyebrow">The exception</div>
       <h2>Sometimes you <em>should</em> just call.</h2>
       <p class="lead">Async isn't a religion, it's a default. There are situations where a voice call is genuinely the fastest, kindest, or clearest path.</p>
-      <p class="lead" style="margin-top:0.9em">Reaching for the phone in the right situation isn't a failure of async discipline. It's wisdom.</p>
+      <p class="lead" style="margin-top:0.9em">Picking up the phone in the right situation isn't laziness. It's good judgment.</p>
     </div>
     <ul class="call-list">
       <li><span class="num">01</span>Strong emotions or sensitive news that could be misread in text.</li>

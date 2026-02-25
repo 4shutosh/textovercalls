@@ -18,7 +18,7 @@ export const SITE_DESCRIPTION_OG =
 
 /** Schema.org / WebSite description */
 export const SITE_DESCRIPTION_SCHEMA =
-  "Most meetings could be messages. A field guide to async communication — with poor, good, and great examples illustrated by Breaking Bad.";
+  "Most meetings could be messages. Learn how to write async messages that respect people's time, illustrated by Breaking Bad.";
 
 export const SITE_OG_IMAGE = `${SITE_URL}/og.png`;
 export const OG_IMAGE_ALT = "Text Over Calls — A field guide to async communication";
